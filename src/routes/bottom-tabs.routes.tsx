@@ -7,8 +7,9 @@ import { Home } from "../screens/Home/Home";
 import { Projects } from "../screens/Projects/Projects";
 import { Contact } from "../screens/Contact/Contact";
 import { About } from "../screens/About/About";
+import type { BottomTabParamList } from "../types/routes.types";
 
-const { Navigator, Screen } = createBottomTabNavigator();
+const { Navigator, Screen } = createBottomTabNavigator<BottomTabParamList>();
 
 export const BottomTabRoutes = () => {
   return (

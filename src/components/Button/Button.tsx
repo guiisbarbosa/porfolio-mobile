@@ -1,11 +1,11 @@
 import React from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 
-import { ButtonProps } from "../../types/Button.types";
+import { ButtonProps } from "../../types/button.types";
 
 import { styles } from "./Button.styles";
 
-export const Button = ({ variant, label }: ButtonProps) => {
+export const Button = ({ variant, label, onPress }: ButtonProps) => {
   return (
     <View>
       <TouchableOpacity
@@ -13,6 +13,7 @@ export const Button = ({ variant, label }: ButtonProps) => {
           styles.button,
           variant === "primary" ? styles.primary : styles.secondary,
         ]}
+        onPress={onPress}
       >
         <Text
           style={[
