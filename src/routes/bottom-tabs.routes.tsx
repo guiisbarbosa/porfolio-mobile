@@ -3,10 +3,13 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { FontAwesome } from "@expo/vector-icons";
 
+import { theme } from "../theme"
+
 import { Home } from "../screens/Home/Home";
 import { Projects } from "../screens/Projects/Projects";
 import { Contact } from "../screens/Contact/Contact";
 import { About } from "../screens/About/About";
+
 import type { BottomTabParamList } from "../types/routes.types";
 
 const { Navigator, Screen } = createBottomTabNavigator<BottomTabParamList>();
@@ -16,8 +19,8 @@ export const BottomTabRoutes = () => {
     <Navigator
       screenOptions={{
         headerStyle: {
-          backgroundColor: "#191121",
-          borderBottomColor: "#302937",
+          backgroundColor: theme.colors.c950,
+          borderBottomColor: theme.colors.neutralDark,
           borderBottomWidth: 1,
           elevation: 0,
           shadowColor: "transparent",
@@ -25,15 +28,15 @@ export const BottomTabRoutes = () => {
         headerTitleAlign: "center",
         headerTintColor: "white",
         tabBarStyle: {
-          backgroundColor: "#191121",
-          borderTopColor: "#1F2937",
+          backgroundColor: theme.colors.c950,
+          borderTopColor: theme.colors.neutralDark,
           borderTopWidth: 1,
         },
         tabBarLabelStyle: {
           fontSize: 12,
         },
-        tabBarActiveTintColor: "#FACC15",
-        tabBarInactiveTintColor: "gray",
+        tabBarActiveTintColor: theme.colors.highlight,
+        tabBarInactiveTintColor: theme.colors.neutral,
       }}
     >
       <Screen

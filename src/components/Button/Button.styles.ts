@@ -1,5 +1,7 @@
 import { StyleSheet } from "react-native";
 
+import { theme } from "../../theme";
+
 export const styles = StyleSheet.create({
   button: {
     width: 300,
@@ -14,15 +16,15 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   primary: {
-    backgroundColor: "#2D1248",
+    backgroundColor: theme.colors.c800,
   },
   secondary: {
-    backgroundColor: "#FACC15",
+    backgroundColor: theme.colors.highlight,
   },
   primaryText: {
-    color: "#7F19E6",
+    color: theme.colors.c400,
   },
   secondaryText: {
-    color: "#191121",
+    color: theme.colors.c800,
   },
 });

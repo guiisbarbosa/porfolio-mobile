@@ -1,13 +1,15 @@
 import { StyleSheet } from "react-native";
 
+import { theme } from "../../theme";
+
 export const styles = StyleSheet.create({
   imageContainer: {
     width: 150,
     height: 150,
     borderRadius: "50%",
-    backgroundColor: "gray",
+    backgroundColor: theme.colors.neutral,
     borderWidth: 4,
-    borderColor: "#4C1583",
+    borderColor: theme.colors.c600,
     overflow: "hidden",
     marginBottom: 20,
   },
@@ -23,18 +25,18 @@ export const styles = StyleSheet.create({
   },
   role: {
     fontSize: 14,
-    color: "#7F19E6",
+    color: theme.colors.c600,
     marginBottom: 20,
     fontWeight: "bold",
   },
   resume: {
     fontSize: 16,
-    color: "#9AA1AD",
+    color: theme.colors.neutral,
     marginBottom: 20,
     textAlign: "center",
   },
   badge: {
-    backgroundColor: "#FACC15",
+    backgroundColor: theme.colors.highlight,
     padding: 8,
     height: 36,
     width: 36,
@@ -47,7 +49,7 @@ export const styles = StyleSheet.create({
   },
   badgeText: {
     fontWeight: "bold",
-    color: "#7F19E6",
+    color: theme.colors.c800,
     fontSize: 14,
   },
 });
