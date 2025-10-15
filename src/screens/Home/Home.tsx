@@ -1,11 +1,13 @@
 import React from "react";
-import { View, Text, Linking } from "react-native";
+import { View, Linking } from "react-native";
 
 import { styles } from "./Home.styles";
 import { Profile } from "../../components/Profile/Profile";
 import { Button } from "../../components/Button/Button";
+
 import type { HomeScreenNavigationProp } from "../../types/routes.types";
-import { Link, useNavigation } from "@react-navigation/native";
+
+import { useNavigation } from "@react-navigation/native";
 
 export const Home = () => {
   const navigation = useNavigation<HomeScreenNavigationProp>();

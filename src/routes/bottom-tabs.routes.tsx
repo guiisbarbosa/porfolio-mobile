@@ -3,7 +3,7 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { FontAwesome } from "@expo/vector-icons";
 
-import { theme } from "../theme"
+import { theme } from "../theme";
 
 import { Home } from "../screens/Home/Home";
 import { Projects } from "../screens/Projects/Projects";
