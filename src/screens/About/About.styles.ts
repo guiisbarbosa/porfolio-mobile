@@ -3,7 +3,6 @@ import { theme } from "../../theme";
 
 export const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: theme.colors.c950,
     paddingLeft: 20,
     paddingRight: 20,
@@ -11,11 +10,23 @@ export const styles = StyleSheet.create({
   },
   mainText: {
     color: theme.colors.neutralLight,
-    marginBottom: 20,
     fontSize: 14,
     textAlign: "justify",
   },
-  cardsContainer: {
+  divisor: {
+    width: "100%",
+    height: 1,
+    backgroundColor: theme.colors.neutralDark,
+    marginVertical: 20,
+  },
+  titles: {
+    fontSize: 16,
+    color: theme.colors.neutralLight,
+    fontWeight: "bold",
+    marginBottom: 20,
+    textAlign: "center",
+  },
+  hardSkillsContainer: {
     flexDirection: "row",
     flexWrap: "wrap",
     justifyContent: "center",

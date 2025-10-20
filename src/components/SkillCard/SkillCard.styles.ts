@@ -8,11 +8,12 @@ export const styles = StyleSheet.create({
     height: 100,
     borderRadius: 8,
     alignItems: "center",
-    justifyContent: "space-around",
+    justifyContent: "space-evenly",
     borderWidth: 1,
     borderColor: theme.colors.neutralDark
   },
   text: {
     color: theme.colors.neutralLight,
+    fontSize: 12
   }
 })
