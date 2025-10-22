@@ -1,5 +1,5 @@
 export type ButtonProps = {
-  label: string,
+  label: string | React.ReactNode,
   variant: "primary" | "secondary",
   onPress?: () => void,
 }
