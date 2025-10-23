@@ -1,19 +1,30 @@
-import { View, Text, StyleSheet } from 'react-native'
-import React from 'react'
+import React from "react";
+import { View, Text, ScrollView } from "react-native";
+
+import { styles } from "./Projects.styles";
+
+import { ProjectCard } from "../../components/ProjectCard/ProjectCard";
 
 export const Projects = () => {
   return (
     <View style={styles.container}>
-      <Text>Projetos</Text>
-    </View>
-  )
-}
+      <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+        <View style={styles.displayCards}>
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+        </View>
+      </ScrollView>
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#191121",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
+      <View style={styles.divisor} />
+
+      <View style={styles.displayInfos}>
+        <Text>Título do projeto</Text>
+        <Text>Objetivo do projeto</Text>
+        <Text>Tecnologias utilizadas</Text>
+      </View>
+    </View>
+  );
+};

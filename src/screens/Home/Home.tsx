@@ -7,9 +7,6 @@ import { Button } from "../../components/Button/Button";
 
 import { FontAwesome } from "@expo/vector-icons/";
 
-
-import { useNavigation } from "@react-navigation/native";
-
 export const Home = () => {
   function handleWhatsappNavigation() {
     Linking.openURL("https://api.whatsapp.com/send/?phone=5535991071126&text&type=phone_number&app_absent=0");

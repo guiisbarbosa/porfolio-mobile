@@ -1,10 +1,10 @@
 import React from "react";
 import { ScrollView, Text, View } from "react-native";
 
-import { styles } from "./About.styles";
-
-import { useBottomTabBarHeight } from "@react-navigation/bottom-tabs";
 import { SkillCard } from "../../components/SkillCard/SkillCard";
+
+import { styles } from "./About.styles";
+import { useBottomTabBarHeight } from "@react-navigation/bottom-tabs";
 
 import { FontAwesome5, Fontisto } from "@expo/vector-icons";
 
