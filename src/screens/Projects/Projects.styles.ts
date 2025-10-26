@@ -9,16 +9,12 @@ export const styles = StyleSheet.create({
     paddingRight: 20,
     paddingTop: 20,
     justifyContent: "center",
-    alignItems: "center",
   },
   displayCards: {
     flexDirection: "row",
     gap: 20,
     marginBottom: 20,
-  },
-  displayInfos: {
-    flex: 1,
-    flexDirection: "column",
+    height: 0,
   },
   divisor: {
     width: "100%",
@@ -26,4 +22,29 @@ export const styles = StyleSheet.create({
     backgroundColor: theme.colors.neutralDark,
     marginVertical: 20,
   },
+  displayInfos: {
+    flex: 1,
+    flexDirection: "column",
+    justifyContent: "flex-start",
+  },
+  sectionTitle: {
+    color: theme.colors.neutralLight,
+    fontSize: 18,
+    fontWeight: "bold",
+    marginBottom: 10,
+    alignSelf: "center",
+  },
+  tagTitle: {
+    color: theme.colors.neutral,
+    fontSize: 12,
+  },
+  tagText: {
+    fontSize: 14,
+    marginBottom: 10,
+    color: theme.colors.neutralLight,
+  },
+  repoLink: {
+    color: theme.colors.c600,
+    alignSelf: "center",
+  }
 });

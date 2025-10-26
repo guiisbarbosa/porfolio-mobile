@@ -14,4 +14,8 @@ export const styles = StyleSheet.create({
     backgroundColor: theme.colors.neutralLight,
     overflow: "hidden",
   },
-})
+  touchable: {
+    width: 200,
+    height: 300,
+  },
+});

@@ -1,5 +1,12 @@
 import React from "react";
-import { View, Text, ScrollView } from "react-native";
+import {
+  View,
+  Text,
+  ScrollView,
+  Linking,
+  TouchableOpacity,
+  Button,
+} from "react-native";
 
 import { styles } from "./Projects.styles";
 
@@ -7,7 +14,14 @@ import { ProjectCard } from "../../components/ProjectCard/ProjectCard";
 
 import { dataProjects } from "../../data/dataProjects";
 
+import { useImageStore } from "../../store/useImageStore";
+
 export const Projects = () => {
+  const image = useImageStore((state) => state.selectedImage);
+  const setImage = useImageStore((state) => state.setSelectedImage);
+
+  console.log("Imagem selecionada:", image);
+
   return (
     <View style={styles.container}>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
@@ -15,6 +29,8 @@ export const Projects = () => {
           {dataProjects.map((project) => (
             <ProjectCard
               key={project.id}
+              image={project.path}
+              onPress={() => setImage(project)}
             />
           ))}
         </View>
@@ -23,9 +39,29 @@ export const Projects = () => {
       <View style={styles.divisor} />
 
       <View style={styles.displayInfos}>
-        <Text>Título do projeto</Text>
-        <Text>Objetivo do projeto</Text>
-        <Text>Tecnologias utilizadas</Text>
+        {image == null ? (
+          <Text style={styles.tagTitle}>Nenhum projeto selecionado</Text>
+        ) : (
+          <>
+            <Text style={styles.sectionTitle}>Informações do projeto</Text>
+
+            <Text style={styles.tagTitle}>Título do projeto:</Text>
+            <Text style={styles.tagText}>{image?.title}</Text>
+
+            <Text style={styles.tagTitle}>Descrição:</Text>
+            <Text style={styles.tagText}>{image?.description}</Text>
+
+            <Text style={styles.tagTitle}>Principal Tecnologia: </Text>
+            <Text style={styles.tagText}>{image?.mainTechnology}</Text>
+            
+            <Text
+              style={styles.repoLink}
+              onPress={() => Linking.openURL(image?.repoLink)}
+            >
+              Acesse o Repositório
+            </Text>
+          </>
+        )}
       </View>
     </View>
   );
