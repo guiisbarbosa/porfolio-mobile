@@ -5,16 +5,18 @@ import { styles } from "./Projects.styles";
 
 import { ProjectCard } from "../../components/ProjectCard/ProjectCard";
 
+import { dataProjects } from "../../data/dataProjects";
+
 export const Projects = () => {
   return (
     <View style={styles.container}>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         <View style={styles.displayCards}>
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
+          {dataProjects.map((project) => (
+            <ProjectCard
+              key={project.id}
+            />
+          ))}
         </View>
       </ScrollView>
 

@@ -12,5 +12,6 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: theme.colors.neutralDark,
     backgroundColor: theme.colors.neutralLight,
+    overflow: "hidden",
   },
 })
