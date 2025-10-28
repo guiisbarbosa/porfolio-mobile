@@ -1,4 +1,4 @@
-import { View, Image, Text, TouchableOpacity } from "react-native";
+import { View, Image, Text, TouchableOpacity, type ImageSourcePropType } from "react-native";
 import React from "react";
 
 import { styles } from "./ProjectCard.style";
@@ -7,7 +7,7 @@ export const ProjectCard = ({
   image,
   onPress,
 }: {
-  image: string;
+  image: ImageSourcePropType;
   onPress: () => void;
 }) => {
   return (
@@ -15,7 +15,7 @@ export const ProjectCard = ({
       {image ? (
         <TouchableOpacity style={styles.touchable} onPress={onPress}>
           <Image
-            source={{ uri: image }}
+            source={image}
             style={{ width: "100%", height: "100%" }}
           />
         </TouchableOpacity>
