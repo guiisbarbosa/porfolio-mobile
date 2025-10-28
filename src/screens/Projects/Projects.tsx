@@ -4,8 +4,6 @@ import {
   Text,
   ScrollView,
   Linking,
-  TouchableOpacity,
-  Button,
 } from "react-native";
 
 import { styles } from "./Projects.styles";
@@ -19,8 +17,6 @@ import { useImageStore } from "../../store/useImageStore";
 export const Projects = () => {
   const image = useImageStore((state) => state.selectedImage);
   const setImage = useImageStore((state) => state.setSelectedImage);
-
-  console.log("Imagem selecionada:", image);
 
   return (
     <View style={styles.container}>
@@ -53,7 +49,7 @@ export const Projects = () => {
 
             <Text style={styles.tagTitle}>Principal Tecnologia: </Text>
             <Text style={styles.tagText}>{image?.mainTechnology}</Text>
-            
+
             <Text
               style={styles.repoLink}
               onPress={() => Linking.openURL(image?.repoLink)}
